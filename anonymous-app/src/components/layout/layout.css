@@ -1,0 +1,28 @@
+.navbar{
+    width: 100%;
+    background-color: rgb(115, 81, 131);
+    padding: 25px;
+}
+
+.brand-logo{
+    color: rgb(245, 238, 238);
+    font-weight: bold;
+    text-decoration: none;
+    font-size: 36px;
+}
+
+.right{
+    float: right;
+    list-style-type: none;
+}
+.right li{
+    float: left;
+    text-decoration: none;
+    color: #fff;
+}
+.right li a{
+    text-decoration: none;
+    color: #fff;
+    padding: 10px;
+    background: #333;
+}
