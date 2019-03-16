@@ -1,0 +1,21 @@
+.confession-list{
+   
+  float: left;
+  width: 60%;
+  padding: 20px 60px;
+    
+}
+
+.borders{
+    background: pink;
+    padding: 30px 30px;
+    margin:15px;
+}
+
+.notifications{
+    float: right;
+    width: 40%;
+    padding: 20px;
+
+}
+

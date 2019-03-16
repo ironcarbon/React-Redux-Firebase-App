@@ -26,3 +26,9 @@
     padding: 10px;
     background: #333;
 }
+
+.navbar .container:after{
+    content: "";
+    display: block;
+    clear: both;
+}
