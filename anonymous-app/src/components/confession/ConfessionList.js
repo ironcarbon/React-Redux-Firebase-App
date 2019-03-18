@@ -1,23 +1,14 @@
 import React from 'react';
 import confession from './confession.css';
+import ConfessionSummary from './ConfessionSummary';
 
 const ConfessionList = () => {
     return (
-        <div className="confession-list">
-            <div className="borders">
-                <p>Posted by the Ipek</p>
-                <p>15th March, 4pm</p>
-            </div>
-            <div className="borders">
-                <p>Posted by the Ipek</p>
-                <p>15th March, 4pm</p>
-            </div>
-            <div className="borders">
-                <p>Posted by the Ipek</p>
-                <p>15th March, 4pm</p>
-            </div>
-
-
+        <div>
+            <ConfessionSummary />
+            <ConfessionSummary />
+            <ConfessionSummary />
+            <ConfessionSummary />
         </div>
     )
 }

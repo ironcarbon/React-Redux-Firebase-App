@@ -1,21 +1,36 @@
-.confession-list{
-   
-  float: left;
-  width: 60%;
-  padding: 20px 60px;
-    
+
+*{
+  box-sizing: border-box;
+
 }
 
-.borders{
-    background: pink;
-    padding: 30px 30px;
-    margin:15px;
+.dashboard{
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+
+.confession-list{
+    
+  width: 50%;
+  background: pink;
+  padding: 30px 30px;
+  margin:15px;
 }
 
 .notifications{
     float: right;
-    width: 40%;
+    width: 30%;
     padding: 20px;
 
 }
 
+.grey{
+    color: grey;
+}
+
+.dashboard:after{
+  content:"";
+  display: block;
+  clear: both;
+}
