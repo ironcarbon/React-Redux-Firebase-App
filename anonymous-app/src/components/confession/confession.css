@@ -46,10 +46,14 @@
   margin: 1rem;
   
 }
-.input-field input{
+.input-field input,
+.input-field textarea{
   width: 100%;
   margin-top: 0.5rem;
   padding: 1rem;
+}
+.input-field textarea{
+  padding: 4rem;
 }
 
 .btn-dark{
