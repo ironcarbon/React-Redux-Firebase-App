@@ -5,7 +5,7 @@
 }
 
 .brand-logo{
-    color: rgb(245, 238, 238);
+    color:rgb(238, 233, 233);
     font-weight: bold;
     text-decoration: none;
     font-size: 36px;
@@ -22,12 +22,19 @@
 }
 .right li a{
     text-decoration: none;
-    color: #fff;
+    color: rgb(115, 81, 131);
     padding: 10px;
-    background: #333;
+    background: rgb(238, 233, 233);
+    border-radius: 5px;
+    margin: 10px;
 }
 
-.navbar .container:after{
+.right li a:hover{
+    color: rgb(238, 233, 233);
+    background:  rgb(115, 81, 131);
+}
+
+.navbar .nav-container:after{
     content: "";
     display: block;
     clear: both;
