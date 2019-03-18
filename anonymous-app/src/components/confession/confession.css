@@ -34,3 +34,32 @@
   display: block;
   clear: both;
 }
+
+.sign-title{
+  font-size: 2rem;
+}
+.signin-container{
+  margin: 3rem;
+}
+
+.input-field{
+  margin: 1rem;
+  
+}
+.input-field input{
+  width: 100%;
+  margin-top: 0.5rem;
+  padding: 1rem;
+}
+
+.btn-dark{
+  padding: 1rem 3rem;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  background: rgb(136, 23, 42);
+  color: rgb(238, 233, 233);
+}
+
+.btn-dark:hover{
+  background: rgb(177, 59, 79);
+}
