@@ -1,8 +1,8 @@
 import authReducer from './authReducers';
 import confessionReducer from './confessionReducer';
-import { combineReducer } from 'redux';
+import { combineReducers } from 'redux';
 
-const rootReducer = combineReducer({
+const rootReducer = combineReducers({
     auth: authReducer,
     confession: confessionReducer
 })
