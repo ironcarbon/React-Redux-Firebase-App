@@ -10,9 +10,15 @@ const initState = {
 const confessionReducer = (state = initState, action) => {
     switch (action.type) {
         case 'CREATE_CONFESSION':
-            console.log('created confession', action.payload)
+            console.log('created confession', action.payload);
+            return state;
+        case 'CREATE_CONFESSION_ERROR':
+            console.log('create confession error', action.err);
+            return state;
+        default:
+            return state;
     }
-    return state;
+
 }
 
 export default confessionReducer;
