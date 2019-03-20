@@ -1,4 +1,7 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+import { createConfession } from '../../store/actions/confessionActions';
+
 
 class CreateConfession extends Component {
 
@@ -15,6 +18,7 @@ class CreateConfession extends Component {
     handleSubmit = (e) => {
         e.preventDefault();
         console.log(this.state);
+        this.props.createConfession(this.state);
     }
 
     render() {
@@ -41,4 +45,14 @@ class CreateConfession extends Component {
     }
 }
 
-export default CreateConfession;
+// const mapDispatchToProps = (dispatch) => {
+//     return {
+//         mycreateConfession: (confession) => dispatch(createConfession(confession))
+//     }
+// }
+
+const mapStateToProps = (state) => {
+    return state;
+}
+
+export default connect(mapStateToProps, { createConfession })(CreateConfession);

@@ -8,6 +8,10 @@ const initState = {
 };
 
 const confessionReducer = (state = initState, action) => {
+    switch (action.type) {
+        case 'CREATE_CONFESSION':
+            console.log('created confession', action.payload)
+    }
     return state;
 }
 

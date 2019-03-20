@@ -1,5 +1,5 @@
 import React from 'react';
-import confessionReducer from '../../store/reducers/confessionReducer';
+
 
 const ConfessionSummary = (props) => {
     console.log(props)
