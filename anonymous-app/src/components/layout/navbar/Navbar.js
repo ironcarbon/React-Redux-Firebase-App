@@ -7,7 +7,9 @@ import { connect } from 'react-redux';
 
 
 
-const Navbar = () => {
+const Navbar = (props) => {
+    const { auth } = props;
+
     return (
         <nav className="navbar">
             <div className="nav-container">
@@ -20,9 +22,9 @@ const Navbar = () => {
 }
 
 const mapStateToProps = (state) => {
-    console.log(state);
+    // console.log(state);
     return {
-
+        auth: state.firebase.auth
     }
 }
 
