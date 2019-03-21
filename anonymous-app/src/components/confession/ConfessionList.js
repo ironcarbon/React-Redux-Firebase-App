@@ -1,6 +1,7 @@
 import React from 'react';
 import confession from './confession.css';
 import ConfessionSummary from './ConfessionSummary';
+import { Link } from 'react-router-dom';
 
 const ConfessionList = (props) => {
     console.log(props)
@@ -8,7 +9,12 @@ const ConfessionList = (props) => {
         <div>
             {props.confessions && props.confessions.map(confession => {
                 return (
-                    <ConfessionSummary confession={confession} key={confession.id} />
+                    <Link to={'/confession/' + confession.id} key={confession.id}>
+                        <ConfessionSummary confession={confession} />
+                    </Link>
+
+
+
                 )
             })}
         </div >

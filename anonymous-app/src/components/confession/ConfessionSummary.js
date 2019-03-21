@@ -2,7 +2,7 @@ import React from 'react';
 
 
 const ConfessionSummary = (props) => {
-    console.log(props)
+    //console.log(props)
     return (
         <div className="confession-list">
             <p>{props.confession.title}</p>

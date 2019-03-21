@@ -1,22 +1,50 @@
-import React from 'react'
+import React from 'react';
+import { connect } from 'react-redux';
+import { firestoreConnect } from 'react-redux-firebase';
+import { compose } from 'redux';
 
 const ConfessionDetails = (props) => {
     const id = props.match.params.id;
-    return (
-        <div className="confession-list">
+    //console.log(props)
+    if (props.confession) {
+        return (
+            <div className="confession-list">
+                <div>
+                    <span>{props.confession.title}</span>
+                    <p>{props.confession.content}</p>
+                </div>
+                <div className="grey">
+                    <div>Posted By {props.confession.authorFirstName} {props.confession.authorLastName}</div>
+                    <div>18th March, 1pm</div>
+                </div>
+            </div>
+        )
+    } else {
+        return (
             <div>
-                <span>Confession Title - {id}</span>
-                <p>gfhgdskghdskghkgfhskgsghgsdkghskghskgsdhgbks</p>
+                <p>Loading project...</p>
             </div>
-            <div className="grey">
-                <div>Posted By Ipek</div>
-                <div>18th March, 1pm</div>
-            </div>
-        </div>
-    )
+        )
+    }
+
 }
 
-export default ConfessionDetails;
+const mapStateToProps = (state, ownProps) => {
+    console.log(state)
+    const id = ownProps.match.params.id;
+    const confessions = state.firestore.data.confessions;
+    const confession = confessions ? confessions[id] : null;
+    return {
+        confession: confession
+    }
+}
+
+export default compose(
+    connect(mapStateToProps),
+    firestoreConnect([
+        { collection: 'confessions' }
+    ])
+)(ConfessionDetails);
 
 
 
