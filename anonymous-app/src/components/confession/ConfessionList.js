@@ -4,7 +4,7 @@ import ConfessionSummary from './ConfessionSummary';
 import { Link } from 'react-router-dom';
 
 const ConfessionList = (props) => {
-    console.log(props)
+    //console.log(props)
     return (
         <div>
             {props.confessions && props.confessions.map(confession => {
