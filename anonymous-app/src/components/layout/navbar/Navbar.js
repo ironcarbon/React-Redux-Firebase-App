@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import layout from '../layout.css';
 import SignedInLinks from '../signedInLinks/SignedInLinks';
 import SignedOutLinks from '../signedOutLinks/SignedOutLinks';
+import { connect } from 'react-redux';
 
 
 
@@ -18,4 +19,11 @@ const Navbar = () => {
     )
 }
 
-export default Navbar;
+const mapStateToProps = (state) => {
+    console.log(state);
+    return {
+
+    }
+}
+
+export default connect(mapStateToProps)(Navbar);
