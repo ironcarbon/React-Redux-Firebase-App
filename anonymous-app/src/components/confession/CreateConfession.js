@@ -7,6 +7,7 @@ import { Redirect } from 'react-router-dom';
 
 class CreateConfession extends Component {
 
+
     state = {
         title: '',
         content: ''
@@ -21,9 +22,11 @@ class CreateConfession extends Component {
         e.preventDefault();
         //console.log(this.state);
         this.props.createConfession(this.state);
+        this.props.history.push('/');
     }
 
     render() {
+
         if (!this.props.auth.uid) return <Redirect to="/signin" />
 
         return (

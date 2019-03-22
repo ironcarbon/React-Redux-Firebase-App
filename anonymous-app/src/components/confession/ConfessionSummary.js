@@ -7,7 +7,7 @@ const ConfessionSummary = (props) => {
         <div className="confession-list">
             <p>{props.confession.title}</p>
             <p>{props.confession.content}</p>
-            <p>Posted by the Ipek</p>
+            <p>Posted by {props.confession.authorFirstName} {props.confession.authorLastName}</p>
             <p className="grey">15th March, 4pm</p>
         </div>
     )

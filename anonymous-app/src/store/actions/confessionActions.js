@@ -1,8 +1,10 @@
 export const createConfession = (confession) => {
     return (dispatch, getState, { getFirebase, getFirestore }) => {
         //make async call to database
-        console.log('ipeksi' + confession);
+        //console.log('ipeksi' + confession);
         const firestore = getFirestore();
+        const profile = getState().firebase.profile;
+        const authorId = getState().firebase.auth.id;
         firestore.collection('confessions').add({
             ...confession,
             authorFirstName: 'ipek',

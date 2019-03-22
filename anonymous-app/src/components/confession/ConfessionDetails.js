@@ -34,7 +34,7 @@ const ConfessionDetails = (props) => {
 }
 
 const mapStateToProps = (state, ownProps) => {
-    console.log(state)
+    //console.log(state)
     const id = ownProps.match.params.id;
     const confessions = state.firestore.data.confessions;
     const confession = confessions ? confessions[id] : null;
