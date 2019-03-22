@@ -4,12 +4,12 @@ export const createConfession = (confession) => {
         //console.log('ipeksi' + confession);
         const firestore = getFirestore();
         const profile = getState().firebase.profile;
-        const authorId = getState().firebase.auth.id;
+        const authorId = getState().firebase.auth.uid;
         firestore.collection('confessions').add({
             ...confession,
-            authorFirstName: 'ipek',
-            authorLastName: 'civicakan',
-            authorId: 12345,
+            authorFirstName: profile.firstName,
+            authorLastName: profile.lastName,
+            authorId: authorId,
             createdAt: new Date()
         }).then(() => {
             dispatch({ type: 'CREATE_CONFESSION', payload: confession });
