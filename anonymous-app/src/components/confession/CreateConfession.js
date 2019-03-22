@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { createConfession } from '../../store/actions/confessionActions';
+import SignIn from '../auth/SignIn';
+import { Redirect } from 'react-router-dom';
 
 
 class CreateConfession extends Component {
@@ -22,6 +24,7 @@ class CreateConfession extends Component {
     }
 
     render() {
+        if (!this.props.auth.uid) return <Redirect to="/signin" />
 
         return (
             <div className="signin-container">
@@ -52,7 +55,10 @@ class CreateConfession extends Component {
 // }
 
 const mapStateToProps = (state) => {
-    return state;
+    //console.log(state)
+    return {
+        auth: state.firebase.auth
+    }
 }
 
 export default connect(mapStateToProps, { createConfession })(CreateConfession);

@@ -2,10 +2,14 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { firestoreConnect } from 'react-redux-firebase';
 import { compose } from 'redux';
+import { Redirect } from 'react-router-dom';
 
 const ConfessionDetails = (props) => {
-    const id = props.match.params.id;
+    //const id = props.match.params.id;
     //console.log(props)
+
+    if (!props.auth.uid) return <Redirect to="/signin" />
+
     if (props.confession) {
         return (
             <div className="confession-list">
@@ -22,7 +26,7 @@ const ConfessionDetails = (props) => {
     } else {
         return (
             <div>
-                <p>Loading project...</p>
+                <p>Loading confessions...</p>
             </div>
         )
     }
@@ -30,12 +34,13 @@ const ConfessionDetails = (props) => {
 }
 
 const mapStateToProps = (state, ownProps) => {
-    //console.log(state)
+    console.log(state)
     const id = ownProps.match.params.id;
     const confessions = state.firestore.data.confessions;
     const confession = confessions ? confessions[id] : null;
     return {
-        confession: confession
+        confession: confession,
+        auth: state.firebase.auth
     }
 }
 
