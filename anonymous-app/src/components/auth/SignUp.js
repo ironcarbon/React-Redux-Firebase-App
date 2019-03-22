@@ -44,6 +44,7 @@ class SignUp extends Component {
                         <label htmlFor="firstName">First Name</label>
                         <input type="firstName" id="firstName" onChange={this.handleChange} />
                     </div>
+
                     <div className="input-field">
                         <label htmlFor="lastName">Last Name</label>
                         <input type="lastName" id="lastName" onChange={this.handleChange} />
