@@ -4,7 +4,13 @@ import React from 'react';
 const Notifications = () => {
     return (
         <div className="notifications">
-            <p>Notifications</p>
+            <span>Notifications</span>
+            <ul className="notification-ul">
+                <li>Notifications</li>
+                <li>Notifications</li>
+                <li>Notifications</li>
+                <li>Notifications</li>
+            </ul>
         </div>
     )
 }

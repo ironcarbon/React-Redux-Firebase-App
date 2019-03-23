@@ -72,3 +72,7 @@ a{
 .btn-dark:hover{
   background: rgb(177, 59, 79);
 }
+
+.notification-ul{
+  list-style-type: none;
+}
