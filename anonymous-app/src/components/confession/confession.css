@@ -11,34 +11,30 @@ a{
 
 .dashboard{
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1.5fr 1fr;
 }
 
 
 .confession-list{
     
-  width: 50%;
+  width: 70%;
   background: pink;
   padding: 30px 30px;
   margin:15px;
 }
 
 .notifications{
-    float: right;
-    width: 30%;
     padding: 20px;
-
 }
+
+
 
 .grey{
     color: grey;
+    font-size:.85rem;
 }
 
-.dashboard:after{
-  content:"";
-  display: block;
-  clear: both;
-}
+
 
 .sign-title{
   font-size: 2rem;
